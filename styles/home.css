@@ -30,6 +30,7 @@
     background-color: #fff;
     color: #00b;
 
+    outline: 2px solid #fff;
     transition: .8s;
 }
 

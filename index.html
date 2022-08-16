@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/projects.css">
-    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/recommendations.css">
 
     <title>Leading Page - template</title>
 </head>
@@ -23,7 +23,7 @@
                 <li class="nav-a active"><a onclick="toActive_nav(this)" href="#home">home</a></li>
                 <li class="nav-a"><a onclick="toActive_nav(this)" href="#about">about</a></li>
                 <li class="nav-a"><a onclick="toActive_nav(this)" href="#projects">projects</a></li>
-                <li class="nav-a"><a onclick="toActive_nav(this)" href="#contact">contact</a></li>
+                <li class="nav-a"><a onclick="toActive_nav(this)" href="#recommendations">Recommendations</a></li>
             </ul>
         </nav>
     </header>
@@ -56,7 +56,7 @@
 
                 <h2 class="title">Again, your name or your company name</h2>
     
-                <p>A description about the main theme of page. The yourself (or your company) history. Talk about relevant experiences.This is where you introduce yourself to the page visitor and approach the contact with him.
+                <p>A description about the main theme of page. The yourself (or your company) history. Talk about relevant experiences.This is where you introduce yourself to the page visitor and approach the Recommendations with him.
                 </p>
 
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, fugiat ea quaerat perspiciatis odit, obcaecati cum temporibus quis autem voluptas dolor assumenda veritatis esse in earum ut quidem et incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ab corrupti perferendis veritatis culpa consequatur accusantium odio qui dolore dignissimos perspiciatis, amet dolorem, delectus rem excepturi distinctio totam commodi quidem.</p>
@@ -381,18 +381,20 @@
 
         </section>
 
-        <section id="contact">
+        <section id="recommendations">
 
-            <h2>contact</h2>
+            <h2 class="title">Recommendations</h2>
 
             <div>
 
-                <a class="contact-button" href="#">contact 1</a>
-                <a class="contact-button" href="#">contact 2</a>
-                <a class="contact-button" href="#">contact 3</a>
-                <a class="contact-button" href="#">contact 4</a>
-                <a class="contact-button" href="#">contact 5</a>
-                <a class="contact-button" href="#">contact 6</a>
+                <a class="recommendations-button" href="#">Recommendations 1</a>
+                <a class="recommendations-button" href="#">Recommendations 2</a>
+                <a class="recommendations-button" href="#">Recommendations 3</a>
+                <a class="recommendations-button" href="#">Recommendations 4</a>
+                <a class="recommendations-button" href="#">Recommendations 5</a>
+                <a class="recommendations-button" href="#">Recommendations 6</a>
+                <a class="recommendations-button" href="#">Recommendations 7</a>
+                <a class="recommendations-button" href="#">Recommendations 8</a>
 
             </div>
 
@@ -402,15 +404,27 @@
 
     <footer>
 
-        <div>
+        <div id="footer-top">
 
-            <h3>Name</h3>
+            <div id="brand">
 
-            <p>Slogan of yourself or your company</p>
+                <img src="./assets/generic-image(2).jpeg" alt="">
+
+                <div>
+
+                    <h3>Name</h3>
+        
+                    <p>Slogan of yourself or your company</p>
+
+                </div>
+
+
+            </div>
+
 
             <nav>
-                <ul>
-                    <li>redirect 1
+                <ul id="nav-list">
+                    <li class="group"><span class="title">redirect 1</span>
                         <ul>
                             <li><a href="#">link</a></li>
                             <li><a href="#">link</a></li>
@@ -419,7 +433,7 @@
                         </ul>
                     </li>
 
-                    <li>redirect 2
+                    <li class="group"><span class="title">redirect 2</span>
                         <ul>
                             <li><a href="#">link</a></li>
                             <li><a href="#">link</a></li>
@@ -428,7 +442,7 @@
                         </ul>
                     </li>
 
-                    <li>redirect 3
+                    <li class="group last"><span class="title">redirect 3</span>
                         <ul>
                             <li><a href="#">link</a></li>
                             <li><a href="#">link</a></li>
@@ -442,7 +456,7 @@
         </div>
         
         <div id="copy-div">
-            &copy; 2022. Direitos reservados
+            &copy; 2022. copywriting.
         </div>
 
     </footer>

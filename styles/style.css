@@ -65,3 +65,49 @@ section p{
 section li, section .title{
     padding: 10px 5px;
 }
+
+footer{
+    background-color: #eee;
+    padding: 15px;
+}
+
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#brand{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border-right: 1px solid #0005;
+}
+
+#nav-list{
+    text-transform: capitalize;
+    list-style: none;
+    display: flex;
+}
+
+#nav-list .group{
+    padding: 0px 15px;
+    border-right: 1px solid #0005;
+}
+
+#nav-list ul{
+    list-style: none;
+    padding-top: 10px;
+}
+
+#copy-div{
+    margin-top: 10px;
+    padding-top: 10px;
+
+    text-align: center;
+
+    border-top: 1px solid;
+}

@@ -25,6 +25,7 @@
     height: 700px;
 
     border: 1px solid;
+    overflow-y: scroll;
 }
 
 .content-category{

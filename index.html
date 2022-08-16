@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/contact.css">
 
     <title>Leading Page - template</title>
 </head>
@@ -17,10 +20,10 @@
         
         <nav>
             <ul>
-                <li class="active"><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li class="nav-a active"><a onclick="toActive_nav(this)" href="#home">home</a></li>
+                <li class="nav-a"><a onclick="toActive_nav(this)" href="#about">about</a></li>
+                <li class="nav-a"><a onclick="toActive_nav(this)" href="#projects">projects</a></li>
+                <li class="nav-a"><a onclick="toActive_nav(this)" href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +34,7 @@
 
             <div>
 
-                <h1>Business or personal name, or little call to action</h1>
+                <h1 class="title">Business or personal name, or little call to action</h1>
     
                 <p> Here, you can add a description about yourself or about your business product. That is, a brief text about the main theme of the page</p>
 
@@ -49,157 +52,331 @@
 
         <section id="about">
 
-            <h2>Again, your name or your company name</h2>
+            <div>
 
-            <p>A description about the main theme of page. The yourself (or your company) history. Talk about relevant experiences.This is where you introduce yourself to the page visitor and approach the contact with him.
-            </p>
+                <h2 class="title">Again, your name or your company name</h2>
+    
+                <p>A description about the main theme of page. The yourself (or your company) history. Talk about relevant experiences.This is where you introduce yourself to the page visitor and approach the contact with him.
+                </p>
 
-            <img src="#" alt="new-image">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, fugiat ea quaerat perspiciatis odit, obcaecati cum temporibus quis autem voluptas dolor assumenda veritatis esse in earum ut quidem et incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ab corrupti perferendis veritatis culpa consequatur accusantium odio qui dolore dignissimos perspiciatis, amet dolorem, delectus rem excepturi distinctio totam commodi quidem.</p>
+
+            </div>
+
+
+            <img src="./assets/generic-image.jpeg" alt="new-image">
 
         </section>
 
         <section id="projects">
 
-            <ul>
-                <li class="projects-category"><a href="#">category 1</a>
-                    <ul>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-                    </ul>
+            <ul id="category-name">
+                <li class="name-category active"><a href="#projects" data-target="#category-1" onclick="toActive_category(this)">category 1</a>
                 </li>
 
-                <li class="projects-category"><a href="#">category 2</a>
-                    <ul>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-                    </ul>
+                <li class="name-category"><a href="#projects" data-target="#category-2" onclick="toActive_category(this)">category 2</a>
                 </li>
 
-                <li  class="projects-category"><a href="#">category 3</a>
-                    <ul>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-                    </ul>
+                <li  class="name-category"><a href="#projects" data-target="#category-3" onclick="toActive_category(this)">category 3</a>
                 </li>
 
-                <li  class="projects-category"><a href="#">category 4</a>
-                    <ul>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-
-                        <li>
-                            <img src="#" alt="exemple-image">
-                            
-                            <h3>Name</h3>
-
-                            <p>Brief description.</p>
-
-                            <a href="#">access</a>
-                        </li>
-                    </ul>
+                <li  class="name-category"><a href="#projects" data-target="#category-4" onclick="toActive_category(this)">category 4</a>
                 </li>
+            </ul>
+
+            <ul class="list-content">
+
+                <ul class="content-category" id="category-1">
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 1</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+                </ul>
+
+                <ul class="content-category" id="category-2">
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 2</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+                </ul>
+
+                <ul class="content-category" id="category-3">
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 3</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+                </ul>
+
+                <ul class="content-category" id="category-4">
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image(2).jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+
+                    <li>
+                        <img src="./assets/generic-image.jpeg" alt="exemple-image">
+                        
+                        <h3 class="title">Name 4</h3>
+
+                        <p>Brief description.</p>
+
+                        <a href="#">access</a>
+                    </li>
+                </ul>
             </ul>
 
         </section>

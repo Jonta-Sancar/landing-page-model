@@ -1,0 +1,82 @@
+@media (max-width: 600px) {
+    body{
+        font-size: 0.8em;
+    }
+
+    header{
+        flex-flow: column;
+        gap: 20px;
+
+        font-size: 1em;
+    }
+    header div{
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav{
+        display: none;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    section{
+        padding-top: 80px;
+    }
+
+    img{
+        max-width: 90vw;
+    }
+
+    #home{
+        flex-direction: column-reverse;
+    }
+
+    #home-buttons{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about{
+        flex-direction: column-reverse;
+    }
+
+    #about div{
+        width: auto;
+    }
+    
+
+    .name-category{
+        font-size: 0.8em;
+    }
+
+    #projects img{
+        display: inline-block;
+    }
+
+    #brand{
+        margin: auto;
+        padding: 0;
+        border: none;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    #brand img{
+        display: inline-block;
+        width: 80vw;
+    }
+
+    footer nav{
+        display: none;
+    }
+}

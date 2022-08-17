@@ -1,12 +1,17 @@
 var hide_interval;
 var show_interval;
-const interval_delay = 24;
+var menu_interval;
+const interval_delay = 2;
+
+let menu_active = false;
 
 let active_category = {
     name:{},
     content:{},
-    show(e){
+    show(e, n){
         let element = e;
+        let element_num = parseInt(element.id[9]);
+        let prev_num = (n)?n:1;
 
         element.style.opacity = '0';
 
@@ -19,6 +24,15 @@ let active_category = {
             if(val != 100){
 
                 element.style.opacity = val + "%";
+
+                if(element_num > prev_num){
+
+                    element.style.left = (100 - val) + "%";
+                }
+                else{
+
+                    element.style.right = (100 - val) + "%";
+                }
                 val++;
             }
             else{
@@ -27,7 +41,7 @@ let active_category = {
         }, interval_delay) 
     },
     hide(e){
-        let element = e;
+        const element = e;
 
         element.style.opacity = '1';
 
@@ -94,6 +108,10 @@ function toActive_nav(e) {
 
 async function toActive_category(e) {
 
+    const last_category = active_category.name.children[0].innerHTML;
+    const last_category_num = parseInt(last_category[9]);
+
+
     const li_item = e.parentElement;
 
     const element_id = e.dataset.target;
@@ -116,8 +134,70 @@ async function toActive_category(e) {
 
         element.style.display = 'flex';
 
-        active_category.show(element);
+        active_category.show(element, last_category_num);
 
         active_category.content = element;
     }
+}
+
+function activeMenu(e){
+    let nav = document.querySelector('header nav');
+
+    let e_1 = e.children[0];
+    let e_2 = e.children[1];
+    let e_3 = e.children[2];
+
+    if (!menu_active) {
+        
+        nav.style.display = 'block';
+
+        clearInterval(menu_interval)
+        let val = 100;
+        menu_interval = setInterval(()=>{
+
+            if(val > 0){
+                e_2.style.opacity = val + '%';
+
+                e_1.style.rotate = [(val > 50)?100-val:50] + 'deg';
+                e_3.style.rotate = [(val > 50)?(100-val)*-1:-50] + 'deg';
+                e_3.style.position = 'absolute';
+                e_3.style.top = [(val > 60)?40-(100-val):0] + '%';
+
+                val--;
+            }
+            else{
+                clearInterval(menu_interval)
+            }
+        },interval_delay)
+
+        menu_active = true;
+    }
+    else{
+
+        clearInterval(menu_interval)
+        let val = 0;
+        menu_interval = setInterval(()=>{
+
+            if(val < 100){
+                e_2.style.opacity = val + '%';
+
+                e_1.style.rotate = [(val < 50)?50-val:0] + 'deg';
+                e_3.style.rotate = [(val < 50)?(50-val)*-1:0] + 'deg';
+                e_3.style.top = [(val < 50)?val:50] + '%';
+                
+                val++;
+            }
+            else{
+
+                e_3.style.position = 'static';
+
+                clearInterval(menu_interval)
+            }
+        },interval_delay)
+
+        nav.style.display = 'none';
+        menu_active = false;
+    }
+
+    // console.log(menu_list)
 }
